@@ -22,16 +22,6 @@ html, body {
 
 /* line 26, ../../sass/index.scss */
 .main-container {
-<<<<<<< HEAD
-  max-width: 1200px;
-  min-width: 960px;
-  margin: 0 auto;
-  padding-top: 16px;
-  position: relative;
-  box-sizing: border-box;
-  height: 100%;
-=======
->>>>>>> [home] style twick
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
