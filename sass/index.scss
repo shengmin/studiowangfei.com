@@ -1,0 +1,52 @@
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/flexbox";
+
+$main-container-width: 1280px;
+
+html, body {
+  height: 100%;
+  color: #ababab;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/background/01.jpg);
+  height: 100%;
+  position: relative;
+}
+
+.main-container {
+  width: $main-container-width;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.top-section {
+  @include display-flex;
+
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px;
+
+  > .left {
+    @include flex(1);
+  }
+
+  .item {
+    margin: 0 12px;
+    text-transform: uppercase;
+  }
+}
+
+.bottom-section {
+  @include display-flex;
+
+  position: absolute;
+  bottom: 0;
+  width: $main-container-width;
+  margin: 0 auto 16px auto;
+
+  > .left {
+    @include flex(1);
+  }
+}
