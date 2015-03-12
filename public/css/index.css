@@ -1,10 +1,10 @@
-/* line 6, ../sass/index.scss */
+/* line 6, ../../sass/index.scss */
 html, body {
   height: 100%;
   color: #ababab;
 }
 
-/* line 11, ../sass/index.scss */
+/* line 11, ../../sass/index.scss */
 .background-image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,32 +13,32 @@ html, body {
   position: relative;
 }
 
-/* line 19, ../sass/index.scss */
+/* line 19, ../../sass/index.scss */
 .main-container {
   width: 1280px;
   margin: 0 auto;
   padding-top: 16px;
 }
 
-/* line 25, ../sass/index.scss */
+/* line 25, ../../sass/index.scss */
 .top-section {
   display: -webkit-flex;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   padding: 8px;
 }
-/* line 31, ../sass/index.scss */
+/* line 31, ../../sass/index.scss */
 .top-section > .left {
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 35, ../sass/index.scss */
+/* line 35, ../../sass/index.scss */
 .top-section .item {
   margin: 0 12px;
   text-transform: uppercase;
 }
 
-/* line 41, ../sass/index.scss */
+/* line 41, ../../sass/index.scss */
 .bottom-section {
   display: -webkit-flex;
   display: flex;
@@ -47,7 +47,7 @@ html, body {
   width: 1280px;
   margin: 0 auto 16px auto;
 }
-/* line 49, ../sass/index.scss */
+/* line 49, ../../sass/index.scss */
 .bottom-section > .left {
   -webkit-flex: 1;
   flex: 1;
