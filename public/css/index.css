@@ -20,7 +20,7 @@ html, body {
 
 /* line 23, ../../sass/index.scss */
 .main-container {
-  max-width: 1280px;
+  max-width: 1200px;
   min-width: 960px;
   margin: 0 auto;
   padding-top: 16px;
@@ -47,7 +47,7 @@ html, body {
 }
 /* line 45, ../../sass/index.scss */
 .top-section .item {
-  margin: 0 12px;
+  margin: 0 36px;
   text-transform: uppercase;
 }
 
