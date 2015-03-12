@@ -1,12 +1,14 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/flexbox";
 
-$max-main-container-width: 1280px;
-$min-main-container-width: 960px;
+$main-container-width: 960px;
+$side-margin: 32px;
+$outer-container-width: $main-container-width + 2 * $side-margin;
 
 html, body {
   height: 100%;
   color: #ababab;
+  overflow: auto;
 }
 
 .background-image {
@@ -14,6 +16,7 @@ html, body {
   background-size: cover;
   background-image: url(../img/background/01.jpg);
   height: 100%;
+  overflow: auto;
 }
 
 .empty-box {
@@ -21,37 +24,50 @@ html, body {
 }
 
 .main-container {
-  max-width: $max-main-container-width;
-  min-width: $min-main-container-width;
-  margin: 0 auto;
-  padding-top: 16px;
+  @include display-flex;
+  @include flex-direction(column);
+
   position: relative;
   box-sizing: border-box;
   height: 100%;
-  @include display-flex;
-  @include flex-direction(column);
+}
+
+.outer-container {
+  width: $outer-container-width;
+  margin: 0 auto;
+  padding: 0 $side-margin;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .top-section {
   @include display-flex;
 
   border-bottom: 1px solid #e5e5e5;
-  padding: 8px;
+  padding: 16px 0 8px 0;
 
   > .left {
     @include flex(1);
   }
 
   .item {
-    margin: 0 12px;
+    margin: 0 36px;
     text-transform: uppercase;
+  }
+
+  .item:first-child {
+    margin-left: 0;
+  }
+
+  .item:last-child {
+    margin-right: 0;
   }
 }
 
 .bottom-section {
   @include display-flex;
 
-  margin: 16px;
+  padding: 16px 0;
 
   > .left {
     @include flex(1);
