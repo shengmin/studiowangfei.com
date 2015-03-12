@@ -13,6 +13,12 @@ html, body {
 }
 
 /* line 19, ../../sass/index.scss */
+.empty-box {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/* line 23, ../../sass/index.scss */
 .main-container {
   max-width: 1280px;
   min-width: 960px;
@@ -21,36 +27,37 @@ html, body {
   position: relative;
   box-sizing: border-box;
   height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
-/* line 29, ../../sass/index.scss */
+/* line 35, ../../sass/index.scss */
 .top-section {
   display: -webkit-flex;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   padding: 8px;
 }
-/* line 35, ../../sass/index.scss */
+/* line 41, ../../sass/index.scss */
 .top-section > .left {
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 39, ../../sass/index.scss */
+/* line 45, ../../sass/index.scss */
 .top-section .item {
   margin: 0 12px;
   text-transform: uppercase;
 }
 
-/* line 45, ../../sass/index.scss */
+/* line 51, ../../sass/index.scss */
 .bottom-section {
   display: -webkit-flex;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   margin: 16px;
 }
-/* line 53, ../../sass/index.scss */
+/* line 56, ../../sass/index.scss */
 .bottom-section > .left {
   -webkit-flex: 1;
   flex: 1;
