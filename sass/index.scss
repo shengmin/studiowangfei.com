@@ -16,6 +16,10 @@ html, body {
   height: 100%;
 }
 
+.empty-box {
+  @include flex(1);
+}
+
 .main-container {
   max-width: $max-main-container-width;
   min-width: $min-main-container-width;
@@ -24,6 +28,8 @@ html, body {
   position: relative;
   box-sizing: border-box;
   height: 100%;
+  @include display-flex;
+  @include flex-direction(column);
 }
 
 .top-section {
@@ -45,9 +51,6 @@ html, body {
 .bottom-section {
   @include display-flex;
 
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   margin: 16px;
 
   > .left {
