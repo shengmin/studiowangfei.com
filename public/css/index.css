@@ -1,53 +1,56 @@
-/* line 6, ../../sass/index.scss */
+/* line 7, ../../sass/index.scss */
 html, body {
   height: 100%;
   color: #ababab;
 }
 
-/* line 11, ../../sass/index.scss */
+/* line 12, ../../sass/index.scss */
 .background-image {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/background/01.jpg);
   height: 100%;
-  position: relative;
 }
 
 /* line 19, ../../sass/index.scss */
 .main-container {
-  width: 1280px;
+  max-width: 1280px;
+  min-width: 960px;
   margin: 0 auto;
   padding-top: 16px;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
 }
 
-/* line 25, ../../sass/index.scss */
+/* line 29, ../../sass/index.scss */
 .top-section {
   display: -webkit-flex;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   padding: 8px;
 }
-/* line 31, ../../sass/index.scss */
+/* line 35, ../../sass/index.scss */
 .top-section > .left {
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 35, ../../sass/index.scss */
+/* line 39, ../../sass/index.scss */
 .top-section .item {
   margin: 0 12px;
   text-transform: uppercase;
 }
 
-/* line 41, ../../sass/index.scss */
+/* line 45, ../../sass/index.scss */
 .bottom-section {
   display: -webkit-flex;
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 1280px;
-  margin: 0 auto 16px auto;
+  width: 100%;
+  margin: 16px;
 }
-/* line 49, ../../sass/index.scss */
+/* line 53, ../../sass/index.scss */
 .bottom-section > .left {
   -webkit-flex: 1;
   flex: 1;
