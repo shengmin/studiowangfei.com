@@ -1,15 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"./public/js/core/HelloMessage.react.js":[function(require,module,exports){
-var React = require('react');
-
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){HelloMessage[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;HelloMessage.prototype=Object.create(____SuperProtoOf____Class0);HelloMessage.prototype.constructor=HelloMessage;HelloMessage.__superConstructor__=____Class0;function HelloMessage(){"use strict";if(____Class0!==null){____Class0.apply(this,arguments);}}
-  Object.defineProperty(HelloMessage.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
-    return React.createElement("div", null, "Hello ", this.props.name);
-  }});
-
-
-module.exports = HelloMessage;
-
-},{"react":"react"}],1:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -19717,7 +19706,18 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":115,"_process":1}],"react":[function(require,module,exports){
+},{"./emptyFunction":115,"_process":1}],"HelloMessage.react":[function(require,module,exports){
+var React = require('react');
+
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){HelloMessage[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;HelloMessage.prototype=Object.create(____SuperProtoOf____Class0);HelloMessage.prototype.constructor=HelloMessage;HelloMessage.__superConstructor__=____Class0;function HelloMessage(){"use strict";if(____Class0!==null){____Class0.apply(this,arguments);}}
+  Object.defineProperty(HelloMessage.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
+    return React.createElement("div", null, "Hello ", this.props.name);
+  }});
+
+
+module.exports = HelloMessage;
+
+},{"react":"react"}],"react":[function(require,module,exports){
 module.exports = require('./lib/React');
 
 },{"./lib/React":29}]},{},[]);

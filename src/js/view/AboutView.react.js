@@ -1,5 +1,5 @@
 var React = require('react');
-var HelloMessage = require('./public/js/core/HelloMessage.react.js');
+var HelloMessage = require('HelloMessage.react');
 
 React.render(
   <HelloMessage name="ShengMin" />,
