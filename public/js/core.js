@@ -19706,16 +19706,26 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":115,"_process":1}],"HelloMessage.react":[function(require,module,exports){
+},{"./emptyFunction":115,"_process":1}],"SlideshowPreview.react":[function(require,module,exports){
 var React = require('react');
+var $__0=    React,PropTypes=$__0.PropTypes;
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){HelloMessage[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;HelloMessage.prototype=Object.create(____SuperProtoOf____Class0);HelloMessage.prototype.constructor=HelloMessage;HelloMessage.__superConstructor__=____Class0;function HelloMessage(){"use strict";if(____Class0!==null){____Class0.apply(this,arguments);}}
-  Object.defineProperty(HelloMessage.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
-    return React.createElement("div", null, "Hello ", this.props.name);
+var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){SlideshowPreview[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;SlideshowPreview.prototype=Object.create(____SuperProtoOf____Class4);SlideshowPreview.prototype.constructor=SlideshowPreview;SlideshowPreview.__superConstructor__=____Class4;
+  function SlideshowPreview(props) {"use strict";
+    ____Class4.call(this,props);
+  }
+
+  Object.defineProperty(SlideshowPreview.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
+    return React.createElement("div", null, "Hello");
   }});
 
 
-module.exports = HelloMessage;
+SlideshowPreview.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired
+};
+
+module.exports = SlideshowPreview;
 
 },{"react":"react"}],"react":[function(require,module,exports){
 module.exports = require('./lib/React');

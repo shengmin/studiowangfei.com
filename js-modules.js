@@ -1,7 +1,7 @@
 'use strict';
 
 var coreModules = [
-  { path: 'core/HelloMessage.react.js', name: 'HelloMessage.react' }
+  { path: 'core/SlideshowPreview.react.js', name: 'SlideshowPreview.react' }
 ];
 
 module.exports = {

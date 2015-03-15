@@ -1,0 +1,16 @@
+.main-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  box-sizing: border-box; }
+
+.main-outer-container {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  box-sizing: border-box; }

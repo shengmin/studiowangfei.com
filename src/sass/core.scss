@@ -1,9 +1,15 @@
-@import "compass/reset";
+@import "reset";
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,100italic,300italic,400);
+
+@include global-reset;
 
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
+}
+
+html, body {
+  height: 100%;
 }
 
 a {

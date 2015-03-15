@@ -1,0 +1,19 @@
+$main-container-width: 960px;
+$side-margin: 32px;
+$main-outer-container-width: $main-container-width + 2 * $side-margin;
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main-outer-container {
+  width: $main-outer-container-width;
+  margin: 0 auto;
+  padding: 0 $side-margin;
+  height: 100%;
+  box-sizing: border-box;
+}
