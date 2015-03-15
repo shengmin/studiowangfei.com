@@ -1,7 +1,7 @@
 {
   "name": "studiowangfei.com",
   "version": "0.1.0",
-  "description": "Fei Wang Personal Website",
+  "description": "Wang Fei Portfolio",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -17,5 +17,16 @@
     "url": "https://github.com/shengmin/studiowangfei.com"
   },
   "keywords": [],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "glob": "^5.0.3",
+    "gulp": "^3.8.11",
+    "gulp-changed": "^1.2.1",
+    "gulp-react": "^3.0.1",
+    "reactify": "^1.1.0",
+    "vinyl": "^0.4.6",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-transform": "^1.0.0"
+  }
 }

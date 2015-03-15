@@ -5,4 +5,8 @@
 node_modules/
 
 # Sass
-.sass-cache
+.sass-cache/
+
+# React
+.module-cache/
+
