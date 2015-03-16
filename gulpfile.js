@@ -37,9 +37,9 @@ var destinationPaths = {
 
 gulp.task('build-react', function() {
   // Compile React
-  return gulp.src(sourceGlobs.js.react)
+  return gulp.src(sourceGlobs.js.root)
     .pipe(changed(destinationPaths.js.root))
-    .pipe(react({ harmony: true }))
+    .pipe(react({ harmony: true, stripTypes: true }))
     .pipe(gulp.dest(destinationPaths.js.root));
 });
 
@@ -52,10 +52,8 @@ gulp.task('build-js-core', ['build-react'], function() {
     };
   });
 
-  coreModules.push('react');
-
   return browserify()
-    .require(coreModules)
+    .require(coreModules.concat(jsModules.external))
     .bundle()
     .pipe(source('core.js'))
     .pipe(gulp.dest(destinationPaths.js.root));
@@ -74,4 +72,4 @@ gulp.task('watch', ['build-sass', 'build-js-core'], function() {
   gulp.watch([sourceGlobs.sass], ['build-sass']);
 })
 
-gulp.task('default', ['build-sass', 'build-js-core', 'watch']);
+gulp.task('default', ['build-sass', 'build-js-core']);

@@ -7,7 +7,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "express": "~4.9.x",
+    "immutable": "^3.6.4"
   },
   "engines": {
     "node": "0.10.x"

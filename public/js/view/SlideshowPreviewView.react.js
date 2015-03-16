@@ -1,7 +1,24 @@
-var React = require('react');
-var SlideshowPreview = require('SlideshowPreview.react');
+(function() {
+  var React = require('react');
+  var SlideshowPreview = require('SlideshowPreview.react');
+  var SlideshowImage = require('SlideshowImage');
+  var SlideshowImageStore = require('SlideshowImageStore');
 
-React.render(
-  React.createElement(SlideshowPreview, {name: "ShengMin"}),
-  document.getElementById('main-container')
-);
+  var images = SlideshowImage.forProject(
+    'anotherleap',
+    1,
+    3,
+    true
+  );
+  var store = new SlideshowImageStore(images);
+
+  React.render(
+    React.createElement(SlideshowPreview, {
+      width: 640, 
+      height: 480, 
+      images: images, 
+      store: store}
+    ),
+    document.getElementById('main-container')
+  );
+})();
