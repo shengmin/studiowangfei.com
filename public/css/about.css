@@ -1,0 +1,39 @@
+.about_title {
+	font-size: 18px;
+	padding-bottom: 24px;
+	font-weight:600;
+	color:black;
+	//border:1px solid blue;
+}
+
+
+.about_container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+      justify-content: space-between;
+}
+
+.about_brief {
+	max-width: 420px;
+  min-width: 240px;
+	line-height:21px;
+	text-align:justify;
+	font-size:12px;
+	font-weight:400;
+	color:#515151;
+	//border:1px solid blue;
+}
+
+.about_img {
+  width: 420px;
+  margin-left: 10px;
+  position: relative;
+	//border:1px solid blue;
+}
+
+.about_img img{
+  width: 100%;
+  position: absolute;
+  display: none;
+}
