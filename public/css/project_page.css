@@ -488,6 +488,25 @@
   position: relative;
 }
 
+.sfpopos_map_infowindow{
+  width: 320px;
+  height: 160px;
+  font-size: 12px;
+  color: #515151;
+}
+
+.sfpopos_map_infowindow div{
+  margin-top: 8px;
+}
+
+#popos_address{
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
 
 
 
