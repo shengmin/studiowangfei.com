@@ -165,7 +165,7 @@ function initialize(){
   // to the map type control.
 
   var mapOptions = {
-    zoom: 17,
+    zoom: 16,
     center: new google.maps.LatLng(37.791117, -122.399004),
     disableDefaultUI: true,
     streetViewControl: false,
@@ -191,7 +191,7 @@ function initialize(){
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: 'green',
         fillOpacity: 0.5,
-        scale: 13,
+        scale: 10,
         strokeColor: 'black',
         strokeWeight: 0
       },
