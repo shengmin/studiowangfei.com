@@ -34,7 +34,7 @@ $(document).ready(function(){
   //slideshow pause when hover
   var theInterval;
   function startSlide() {
-    theInterval = setInterval(slideSwitch, 2500);
+    theInterval = setInterval(slideSwitch, 4000);
   }
 
   function stopSlide() {

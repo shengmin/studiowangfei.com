@@ -34,7 +34,7 @@ $(document).ready(function(){
   //slideshow pause when hover
   var theInterval;
   function startSlide() {
-    theInterval = setInterval(slideSwitch, 2500);
+    theInterval = setInterval(slideSwitch, 4000);
   }
 
   function stopSlide() {
@@ -154,8 +154,7 @@ $(document).ready(function(){
 var map;
 function initialize(){
   // Create an array of styles.
-  var styles = [{"featureType":"water","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#4db4e3"},{"saturation":0},{"lightness":50}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"weight":0.1},{"lightness":-100}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":-17}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"},{"color":"#808080"},{"hue":"#000000"},{"lightness":50}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#3ba635"},{"saturation":-61},{"lightness":-4}]}]
-
+  var styles = [{"featureType": "water", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#0008FF" }, { "saturation": -54 }, { "lightness": -42 }]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":21}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"weight":0.1},{"lightness":-100}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":-15}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"},{"color":"#808080"},{"hue":"#000000"},{"lightness":50}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#3ba635"},{"saturation":-70},{"lightness":50}]}]
   // Create a new StyledMapType object, passing it the array of styles,
   // as well as the name to be displayed on the map type control.
   var styledMap = new google.maps.StyledMapType(styles,
@@ -165,7 +164,7 @@ function initialize(){
   // to the map type control.
 
   var mapOptions = {
-    zoom: 17,
+    zoom: 15,
     center: new google.maps.LatLng(37.791117, -122.399004),
     disableDefaultUI: true,
     streetViewControl: false,
@@ -185,19 +184,45 @@ function initialize(){
   var popos_marker =[];
   for(var i=0; i<popos.length; i++){
     var myLatLng = new google.maps.LatLng(popos[i].latitude, popos[i].longitude);
+    // different color based on quality rating
+    var rating_color;
+    if (popos[i].quality === 'poor'){
+      rating_color = '#b5dea2'
+    }else if(popos[i].quality === 'fair'){
+      rating_color = '#6CBE45'
+    }else if(popos[i].quality === 'good'){
+      rating_color = '#4b8530'
+    }else {
+      rating_color = '#2b4c1b'
+    }
+
     popos_marker[i] = new google.maps.Marker({
       position: myLatLng,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        fillColor: 'green',
-        fillOpacity: 0.5,
-        scale: 13,
+        fillColor: rating_color,
+        fillOpacity: 0.85,
+        scale: 20,
         strokeColor: 'black',
         strokeWeight: 0
       },
       draggable: false,
       map: map
     });
+
+    /*var center = new google.maps.Marker({
+      position: myLatLng,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'white',
+        fillOpacity: 1,
+        scale: 1,
+        strokeColor: 'black',
+        strokeWeight: 0
+      },
+      draggable: false,
+      map: map
+    });*/
   }
 
   var infowindow;
